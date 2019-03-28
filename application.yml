@@ -8,7 +8,7 @@ server:
 spring:
   application:
     name: USER-PROVIDER # 服务名，注意大写，中间一定不能有"下划线"
-  profiles: provider
+  profiles: provider # 当前环境的代号，若要使用该环境需要该参数
 eureka:
   client:
     service-url:
