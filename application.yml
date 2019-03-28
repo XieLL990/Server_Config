@@ -39,9 +39,6 @@ spring:
 ---
 server:
   port: 9527 # 服务提供者提供服务的端口
-spring:
-  application:
-    name: MICROSERVICE-ZUUL # 显示在服务注册中心的名字
 eureka:
   client:
     service-url:
@@ -53,4 +50,6 @@ zuul:
     xl.serviceId: user-provider
     xl.path: /user/**  # 替代掉路由和具体的服务名
 spring:
+  application:
+    name: MICROSERVICE-ZUUL # 显示在服务注册中心的名字
   profiles: zuul # 当前环境的代号，若要使用该环境需要该参数
