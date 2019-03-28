@@ -1,1 +1,15 @@
-
+spring:
+  profiles:
+    active:
+    - test # 默认使用环境是 test
+---
+server:
+  port: 8001 # 服务提供者提供服务的端口
+spring:
+  application:
+    name: USER-PROVIDER # 服务名，注意大写，中间一定不能有"下划线"
+  profiles: provider
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/ # Eureka 服务注册中心的服务地址
